@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2? family= Source+Sans+Pro & display=swap');
+
+body{font-family: 'Merriweather', sans-serif;
+     margin: 0px;
+    padding: 0px;
+}
+/* barre de navigation*/
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: rgb(116, 172, 209);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    opacity: 0.9;
+}
+nav h1{
+    font-size: 25px;
+    animation: apparition 0.5s ease-in-out;
+    
+}
+
+nav h1 a{
+    color: black;
+    text-shadow: #ffdb3a 1px 1px, #000000 -1px 1px, #ffdb3a -1px -1px, #ffffff 1px -1px;
+    display: inline;
+}
+
+@keyframes apparition {
+    from{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    
+    
+}
+
+nav h1 a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 14%;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transform: scale(0);
+    transition: transform 0.8s ease-in-out;
+}
+
+nav h1:hover a::after{
+    transform: scale(1);
+}
+
+nav .onglets{
+    display: flex;
+    flex-wrap: wrap;
+    animation: apparition 1s ease-in-out;
+}
+nav .onglets p{
+    font-size: 22px;
+    margin-right: 15px;
+    cursor: pointer;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+    
+}
+
+nav .onglets p:hover{
+    color: rgb(255, 255, 255);
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+}
+
+nav .link a {
+    color: black;
+ }
+ 
+ nav .link a:hover{
+     color: rgb(255, 255, 255);
+ }
+
+nav .onglets input{
+    margin: 8px 20px;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-color: white;
+    
+}
+/* fin de la barre de navigation */
+
+/*header */
+
+header .background{
+    background-image: url("https://www.vitriweb.fr/wp-content/uploads/2018/06/fond-teinte24.jpg");
+    height: 700px ;
+    width: 100%;
+    display: flex;
+    
+    
+    
+}
+
+header .infos{
+    margin-left: 15%;
+    margin-top: 8%;
+    opacity: 1;
+    color: white;
+    font-size: 200%;
+    flex-wrap: wrap;
+    
+}
+
+header .info{
+    display: flex;
+    margin-top: 5%;
+    color: white;
+    font-size: 70%;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+    
+
+
+header .colab{
+    width: 600px;
+    height: 450px;
+    padding-left: 10%;
+    margin-top: -10%;
+    border-radius: 100%;
+    justify-content: center;
+    
+}
+
+.infos .associé{
+    align-self: center;
+    padding-right: 20%;
+    display: flex;
+    
+}
+
+.info .associé a{
+ 
+    color: rgb(255, 153, 0);
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #ffdbdb 1px -1px;
+    
+}
+
+
+.info .associé a:hover{
+    color: rgb(182, 182, 182);
+    
+    
+}
+
+
+
+
+/* fin du header */
+
+
+  /* pied de page */
+
+footer{
+    margin-top:  100px;
+    background-color: black;
+    color: burlywood;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+footer .social-media {
+    display: flex;
+
+}
+
+footer .social-media p{
+    margin-right: 15px;
+    border: 1px solid white;
+    border-radius: 100px;
+    padding: 10px;
+    text-align: center;
+    width: 20px;
+    cursor: pointer;
+}
+/* fin de pied de page */
+ 
+ 
+@media screen  and (max-width: 320px){
+
+     nav , header, section, img, .associé .colab{
+
+        display: none; }
+    }
